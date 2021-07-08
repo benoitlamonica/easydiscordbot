@@ -1,0 +1,18 @@
+{
+  "name": "easydiscordbot",
+  "version": "0.2.0",
+  "description": "A light framework to create your own discord bot",
+  "main": "app.js",
+  "author": "Benoit Lamonica",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "newco": "node vendor/shell/add_command"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
