@@ -4,17 +4,14 @@ const moduleData = require('./data');
 
 class CommandHandler {
 
-    static sendHelpMessage = (msg) => {
-        let reply = Utils.showListOfCommandsMessage();
-        msg.channel.send(reply);
+    sendHelpMessage = () => {
+        return Utils.showListOfCommandsMessage();
     }
 
-    static sendMessageWithArgAndData = (msg, arg) => {
-        msg.channel.send(
-            Utils.embed('Some data')
-                .addField('Data module', moduleData.someData, true)
-                .addField('Arg', arg, true)
-        );
+    sendMessageWithArgAndData = (arg) => {
+        return Utils.embed('Some data')
+            .addField('Data module', moduleData.someData, true)
+            .addField('Arg', arg, true)
     }
 
     // Create others logic for commands here...
