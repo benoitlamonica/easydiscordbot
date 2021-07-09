@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const botCommands = require('../../commands');
 
 class EasyDiscordBot {
+
     constructor(TOKEN, PREFIX) {
 
         // Setting up Client
