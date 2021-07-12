@@ -4,7 +4,7 @@ class ReponseBot {
     constructor(msg) {
         this.response = msg;
     }
-    useHandler = (handlerName, arg = null) => {
+    useCommandHandler = (handlerName, arg = null) => {
         this.response.channel.send(new CommandHandler()[handlerName](arg));
     }
     send = (msgToSend) => {

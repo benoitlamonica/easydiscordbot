@@ -6,6 +6,6 @@ module.exports = {
     name: 'data',
     description: 'Exemple command with data',
     execute: (msg, arg) => {
-        new ReponseBot(msg).useHandler('sendMessageWithArgAndData', arg);
+        new ReponseBot(msg).useCommandHandler('sendMessageWithArgAndData', arg);
     }
 }

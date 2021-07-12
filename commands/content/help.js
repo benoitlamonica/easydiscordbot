@@ -6,6 +6,6 @@ module.exports = {
     name: 'help',
     description: 'Shows all commands available',
     execute: (msg, arg) => {
-        new ReponseBot(msg).useHandler('sendHelpMessage');
+        new ReponseBot(msg).useCommandHandler('sendHelpMessage');
     }
 }
