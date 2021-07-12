@@ -25,11 +25,11 @@ Still in your discord dev interface click on `OAuth2`, then in OAuth2 URL Genera
 
 Now we're configuring the bot permissions. In Bot permissions check **Send messages** and **Read message history**. For now it will be enought for a basic bot usage.
 
-After checked all needed permissions you should see a link in Scopes, copy this link in your foavorite browser it will add your bot in your favorite discord server :). Be aware that you need to be administrator of the server ! 😄
+After checked all needed permissions you should see a link in Scopes, copy this link in your favorite browser, it will add your bot in your favorite discord server. Be aware that you need to be administrator of the server ! 😄
 
 ### Installation in 10 sec
 
-Of course Easy Discord Bot comes with a beautiful cli, first of all you need to install it globally : `npm i edbcli -g`.
+Ok, now EDBot installation ! Of course EDBot comes with a beautiful cli, first of all you need to install it globally : `npm i edbcli -g`.
 Then you need to create your bot environement ! `edb create <your-bot>`, And that's all ! Now let's see how to configure it.
 
 ### Basic use
