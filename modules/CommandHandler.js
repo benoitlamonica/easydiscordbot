@@ -14,13 +14,13 @@ class CommandHandler {
             .addField('Arg', arg, true)
     }
 
-    sendApiExemple = () => {
-        ApiHandler.getApiExemple().then(rep => {
-            return rep.map(coffee => {
-                return Utils.embed('Coffee')
-                    .addField(coffee.title, coffee.description, false)
-            })
+    sendApiExemple = async (title) => {
+        let apiResp = await ApiHandler.getApiExemple();
+        let reply = Utils.embed(title);
+        apiResp.forEach(coffee => {
+            reply.addField(coffee.title, coffee.description, false)
         })
+        return reply;
     }
 
     // Create others logic for commands here...
