@@ -14,6 +14,15 @@ class CommandHandler {
             .addField('Arg', arg, true)
     }
 
+    sendApiExemple = () => {
+        ApiHandler.getApiExemple().then(rep => {
+            return rep.map(coffee => {
+                return Utils.embed('Coffee')
+                    .addField(coffee.title, coffee.description, false)
+            })
+        })
+    }
+
     // Create others logic for commands here...
 
 }

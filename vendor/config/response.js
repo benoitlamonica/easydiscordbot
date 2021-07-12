@@ -1,6 +1,7 @@
 const { CommandHandler } = require("../../modules/CommandHandler");
 
 class ReponseBot {
+
     constructor(msg) {
         this.response = msg;
     }

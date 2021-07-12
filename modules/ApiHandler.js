@@ -4,8 +4,9 @@ const API_TOKEN = process.env.API_TOKEN;
 
 class ApiHandler {
 
-    static getSomeDataWithApi(arg) {
-        // Write some code here for API with axios...
+    static getApiExemple = async () => {
+        let data = (await axios.get('https://api.sampleapis.com/coffee/hot')).data;
+        return data;
     }
 
 }
