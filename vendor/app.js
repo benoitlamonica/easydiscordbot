@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const Express = require('express');
-const { EasyDiscordBot } = require('./vendor/config/bot');
+const { EasyDiscordBot } = require('./config/bot');
 const app = Express();
 
 const PORT = process.env.PORT;
