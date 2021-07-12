@@ -6,7 +6,7 @@
   "author": "Benoit Lamonica",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
+    "start": "node vendor/app.js",
     "newco": "node vendor/shell/add_command"
   },
   "dependencies": {
