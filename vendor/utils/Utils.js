@@ -9,14 +9,6 @@ class Utils {
         return new Discord.MessageEmbed().setTitle(title).setColor(color);
     }
 
-    static formatCmdObj = (file, cmdName) => {
-        let newFile = file.replace(/\}/g, '');
-        newFile = newFile.replace(/\n/g, '');
-        newFile = newFile.replace(/ /g, "");
-        newFile += `,${cmdName}:require('./content/${cmdName}')}`;
-        return newFile;
-    }
-
     static showListOfCommandsMessage = () => {
         let listMessage = Utils.embed('List of commands')
             .setDescription(`All commands must begin with ${CMD_PREFIX}`)

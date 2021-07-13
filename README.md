@@ -36,7 +36,7 @@ Then you need to create your bot environement ! `edb create <your-bot>`, And tha
 
 #### Step 1
 
-Go to the directory of your bot created by the cli, then go to the .env file and set up your environement. Everything you need to do is written in this file
+Go to the directory of your bot created by the cli, then go to the .env file and set up your environement. Everything you need to do is written in this file.
 
 #### Step 2
 
