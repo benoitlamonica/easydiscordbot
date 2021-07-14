@@ -1,4 +1,4 @@
-// Created by the god Benoit Lamonica on the 08/07/2021
+// Created by Benoit Lamonica on the 08/07/2021
 
 const { ReponseBot } = require("../../vendor/config/response")
 

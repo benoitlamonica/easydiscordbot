@@ -23,7 +23,7 @@ class CommandHandler {
         return reply;
     }
 
-    // Create others logic for commands here...
+    //---
 
 }
 
