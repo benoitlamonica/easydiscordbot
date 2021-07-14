@@ -23,7 +23,7 @@ class CommandHandler {
         return reply;
     }
 
-    //---
+    //--- /!\ Do no touch this line /!\
 
 }
 
