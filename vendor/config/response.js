@@ -6,7 +6,7 @@ class ReponseBot {
         this.response = msg;
     }
 
-    useCommandHandler = (handlerName, { arg = null, async = false }) => {
+    useCommandHandler = (handlerName, config = { arg: null, async: false }) => {
         if (async) {
             new CommandHandler()[handlerName](arg).then(resp => this.response.channel.send(resp));
             return;
