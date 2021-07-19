@@ -48,6 +48,6 @@ To launch the bot type in your bot directory `yarn start` or `npm run start`, ev
 
 ### Create your own command !
 
-To create your own command type in your bot directory `bease add:command <command-name>`. It will appear in ./commands/content. Then your need to do the logic yourself in the Command Handler ./module/CommandHandler, you will find your own method created by the CLI ! 🙂
+To create your own command type in your bot directory `bease add:command <command-name>`. It will appear in `./commands/content`. Then your need to do the logic yourself in the Command Handler `./modules/CommandHandler.js`, you will find your own method created by the CLI ! 🙂
 
 More will comme soon ! Thanks !
