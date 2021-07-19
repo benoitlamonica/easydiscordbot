@@ -1,4 +1,6 @@
-# Easy Discord Bot
+# Bease
+
+![logo](https://benoitlamonica.com/asset/logo_small_icon_only_inverted.png)
 
 [![version](https://img.shields.io/badge/version-0.1.0-green.svg)](https://semver.org)
 
@@ -27,27 +29,25 @@ Now we're configuring the bot permissions. In Bot permissions check **Send messa
 
 After checked all needed permissions you should see a link in Scopes, copy this link in your favorite browser, it will add your bot in your favorite discord server. Be aware that you need to be administrator of the server ! 😄
 
+For the records, you will find your bot token in the bot section of your app 🙂
+
 ### Installation in 10 sec
 
-Ok, now EDBot installation ! Of course EDBot comes with a beautiful cli, first of all you need to install it globally : `npm i edbcli -g`.
-Then you need to create your bot environement ! `edb create <your-bot>`, And that's all ! Now let's see how to configure it.
+Ok, now Bease installation ! Of course Bease comes with a beautiful cli, first of all you need to install it globally : `npm i edbcli -g`.
+Then you need to create your bot environement ! `bease new`, And that's all ! Just follow the steps indicated by the cli and you're good to go !
 
 ### Basic use
 
 #### Step 1
 
-Go to the directory of your bot created by the cli, then go to the .env file and set up your environement. Everything you need to do is written in this file.
-
-#### Step 2
-
 You need to install dependency, so type in your bot directory `yarn` or `npm i` to be up to date
 
-#### Step 3
+#### Step 2
 
 To launch the bot type in your bot directory `yarn start` or `npm run start`, everytime you make some changes you will need to launch it again ! And now type !bot help (or any prefix you put in .env) to see it in action !
 
 ### Create your own command !
 
-To create your own command type in your bot directory `yarn newco <commandname>` or `npm run newco <commandname>`. It will appear in ./commands/content. Then your need to do the logic yourself ! 🙂
+To create your own command type in your bot directory `bease add:command <command-name>`. It will appear in ./commands/content. Then your need to do the logic yourself in the Command Handler ./module/CommandHandler, you will find your own method created by the CLI ! 🙂
 
 More will comme soon ! Thanks !

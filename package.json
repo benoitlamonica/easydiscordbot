@@ -1,6 +1,6 @@
 {
   "name": "easydiscordbot",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "description": "A light framework to create your own discord bot",
   "main": "app.js",
   "author": "Benoit Lamonica",
