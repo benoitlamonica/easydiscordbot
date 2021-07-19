@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://benoitlamonica.com/asset/logo_small.png" alt="logo" width="100" height="100"/>
+    <img src="https://benoitlamonica.com/asset/logo_small.png" alt="logo" width="200" height="200"/>
 </p>
 
 [![version](https://img.shields.io/badge/version-0.1.0-green.svg)](https://semver.org)
