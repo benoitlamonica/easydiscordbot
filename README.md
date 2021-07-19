@@ -1,6 +1,6 @@
 # Bease
 
-![logo](https://benoitlamonica.com/asset/logo_small_icon_only_inverted.png)
+<img src="https://benoitlamonica.com/asset/logo_small.png" alt="drawing" style="width:100px; display:block; margin: 0 auto;"/>
 
 [![version](https://img.shields.io/badge/version-0.1.0-green.svg)](https://semver.org)
 
