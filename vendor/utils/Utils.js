@@ -11,10 +11,7 @@ class Utils {
 
     static showListOfCommandsMessage = () => {
         let listMessage = Utils.embed('List of commands')
-            .setDescription(`All commands must begin with ${CMD_PREFIX}`)
-            .addField(
-                '------------------------------------------------------------------------',
-                '----------------------------------------------------------------------');
+            .setDescription(`All commands must begin with ${CMD_PREFIX}`);
 
         let cmds = require('../../commands');
         Object.keys(cmds).forEach(key => {
