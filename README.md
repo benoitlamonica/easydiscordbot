@@ -4,6 +4,8 @@
 
 [![version](https://img.shields.io/badge/version-0.1.0-green.svg)](https://semver.org)
 
+[Official Website](https://www.benoitlamonica.com)
+
 ## Create your own Discord bot with ease !
 
 Everything is already set up ! You just have to link your discord bot and then do some logic of your own ... 😋
