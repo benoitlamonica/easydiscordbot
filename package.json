@@ -2,17 +2,29 @@
   "name": "easydiscordbot",
   "version": "0.5.0",
   "description": "A light framework to create your own discord bot",
-  "main": "app.js",
+  "main": "dist/vendor/app.js",
   "author": "Benoit Lamonica",
   "license": "MIT",
   "scripts": {
-    "start": "node vendor/app.js",
-    "newco": "node vendor/shell/add_command"
+    "build": "tsc",
+    "start": "yarn build && node -r module-alias/register dist/vendor/app.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "module-alias": "^2.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "_moduleAliases": {
+    "#": "dist/vendor",
+    "@": "dist/modules",
+    "$": "dist/commands"
   }
 }
