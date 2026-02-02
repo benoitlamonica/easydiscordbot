@@ -2,7 +2,7 @@ import Discord from 'discord.js';
 import { CommandHandler } from '@/CommandHandler';
 
 interface ReponseConfig {
-    arg?: string | null;
+    arg?: string;
     async?: boolean;
 }
 
@@ -13,17 +13,11 @@ class ReponseBot {
         this.response = msg;
     }
 
-    useCommandHandler = (handlerName: string, config: ReponseConfig = { arg: null, async: false }) => {
-        const handler = new CommandHandler();
-        const method = (handler as any)[handlerName];
-
-        if (config.async) {
-            method.call(handler, config.arg).then((resp: Discord.MessageEmbed) => {
-                this.response.channel.send(resp);
-            });
-            return;
-        }
-        this.response.channel.send(method.call(handler, config.arg));
+    useCommandHandler = async (handlerName: keyof CommandHandler, config: ReponseConfig = {}) => {
+      const handler = new CommandHandler();
+      const result = handler[handlerName](config.arg);
+      const response = result instanceof Promise ? await result : result;
+      this.send(response);
     }
 
     send = (msgToSend: string | Discord.MessageEmbed) => {

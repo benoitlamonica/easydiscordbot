@@ -4,28 +4,29 @@ import { moduleData } from '@/data';
 import Discord from 'discord.js';
 
 class CommandHandler {
+  sendHelpMessage() {
+    return Utils.showListOfCommandsMessage();
+  }
+  
+  sendMessageWithArgAndData(arg?: string) {
+    return Utils.embed('Some data')
+      .addField('Data module', moduleData.someData, true)
+      .addField('Arg', arg || 'N/A', true)
+  }
 
-    sendHelpMessage = (): Discord.MessageEmbed => {
-        return Utils.showListOfCommandsMessage();
-    }
+  async sendApiExemple(arg = 'API Exemple') {
+    const apiResp = await ApiHandler.getApiExemple();
+    const reply = Utils.embed(arg || 'API Exemple Response');
+    apiResp.forEach((coffee) => {
+      reply.addField(coffee.title, coffee.description, false)
+    })
+    return reply;
+  }
 
-    sendMessageWithArgAndData = (arg: string | undefined): Discord.MessageEmbed => {
-        return Utils.embed('Some data')
-            .addField('Data module', moduleData.someData, true)
-            .addField('Arg', arg || 'N/A', true)
-    }
-
-    sendApiExemple = async (title: string = 'API Example'): Promise<Discord.MessageEmbed> => {
-        const apiResp = await ApiHandler.getApiExemple();
-        const reply = Utils.embed(title);
-        apiResp.forEach((coffee: any) => {
-            reply.addField(coffee.title, coffee.description, false)
-        })
-        return reply;
-    }
-
-    //--- /!\ Do not touch this line /!\
+  //--- /!\ Do not touch this line /!\
 
 }
 
-export { CommandHandler };
+type CommandHandlerMethods = keyof CommandHandler;
+
+export { CommandHandler, CommandHandlerMethods };
